@@ -11,6 +11,25 @@ public class Countries {
         this.country = null;
         this.continent = null;
     }
+    public void setCountry(String country) {
+        this.country = country;
+    }
+    public void setContinent(String continent) {
+        this.continent = continent;
+    }
 
+    public void setId( long id ) {
+        this.id = id;
+    }
 
+    public String getCountry() {
+        return country;
+    }
+    public String getContinent() {
+        return continent;
+    }
+
+    public long getId(){
+        return id;
+    }
 }

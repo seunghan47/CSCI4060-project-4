@@ -45,27 +45,7 @@ public class CountriesDataTableHelper extends SQLiteOpenHelper {
         onCreate( db );
     }
 
-    public class CountriesData {
-        private SQLiteDatabase db;
-        private SQLiteOpenHelper countriesDbHelper;
-        public CountriesData( Context context ) {
-            this.countriesDbHelper = CountriesDataTableHelper.getInstance( context );
-        }
-        public void open() {
-            db = countriesDbHelper.getWritableDatabase();
-        }
-        public void close() {
-            if( countriesDbHelper != null )
-                countriesDbHelper.close();
-        }
-    }
 
-    public Countries storeCountry( Countries countries ) {
-        ContentValues values = new ContentValues();
-
-
-
-    }
 
 
 }
