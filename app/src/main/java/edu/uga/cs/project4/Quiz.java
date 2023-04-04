@@ -1,30 +1,30 @@
 package edu.uga.cs.project4;
 
 public class Quiz {
-    private String questions;
+    private Question [] questions;
     private String date;
     private int currScore;
     private int numQuestionsAnswered;
 
     public Quiz() {
-        this.questions = null;
+        this.questions = new Question[6];
         this.date = null;
         this.currScore = -1;
         this.numQuestionsAnswered = -1;
     }
 
-    public Quiz(String questions, String date, int currScore, int numQuestionsAnswered) {
+    public Quiz(Question [] questions, String date, int currScore, int numQuestionsAnswered) {
         this.questions = questions;
         this.date = date;
         this.currScore = currScore;
         this.numQuestionsAnswered = numQuestionsAnswered;
     }
 
-    public String getQuestions() {
+    public Question [] getQuestions() {
         return questions;
     }
 
-    public void setQuestions(String questions) {
+    public void setQuestions(Question [] questions) {
         this.questions = questions;
     }
 

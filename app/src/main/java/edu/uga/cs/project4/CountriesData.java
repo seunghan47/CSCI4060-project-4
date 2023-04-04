@@ -27,7 +27,7 @@ public class CountriesData {
      * @param countries
      * @return
      */
-    public Countries storeCountry(Countries countries) {
+    public Country storeCountry(Country countries) {
         ContentValues values = new ContentValues();
 
         values.put(CountriesDataTableHelper.COUNTRIES_COLUMN_NAME, countries.getCountry());

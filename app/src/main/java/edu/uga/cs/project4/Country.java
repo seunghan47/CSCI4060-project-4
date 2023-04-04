@@ -1,12 +1,12 @@
 package edu.uga.cs.project4;
 
-public class Countries {
+public class Country {
 
     private long id;
     private String country;
     private String continent;
 
-    public Countries() {
+    public Country() {
         this.id = -1;
         this.country = null;
         this.continent = null;
