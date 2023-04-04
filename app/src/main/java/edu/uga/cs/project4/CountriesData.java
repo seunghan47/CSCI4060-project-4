@@ -22,6 +22,11 @@ public class CountriesData {
             countriesDbHelper.close();
     }
 
+    /**
+     * need to revise this part.
+     * @param countries
+     * @return
+     */
     public Countries storeCountry(Countries countries) {
         ContentValues values = new ContentValues();
 
