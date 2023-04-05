@@ -1,16 +1,43 @@
 package edu.uga.cs.project4;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
+
 public class Quiz {
     private Question [] questions;
     private String date;
     private int currScore;
     private int numQuestionsAnswered;
 
+    List<Question> questionList = new ArrayList<>();
+
+
     public Quiz() {
         this.questions = new Question[6];
         this.date = null;
         this.currScore = -1;
         this.numQuestionsAnswered = -1;
+    }
+
+    public Quiz(CountriesData countriesData){
+        int count = 0;
+        String[] countries = new String[6];
+        while(count < 6){
+            int countryVal = ThreadLocalRandom.current().nextInt(countriesData.countries.size());
+            boolean a = false;
+            for (int i = 0; i < countries.length; i++){
+                if (countries[i] != null && countries[i].equals(countriesData.countries.get(countryVal))){
+                    a = true;
+                }
+            }
+
+            if (a == false){
+                countries[count++] = countriesData.countries.get(countryVal).toString();
+                Question question = new Question(countriesData.countries.get(countryVal));
+                questionList.add(question);
+            }
+        }
     }
 
     public Quiz(Question [] questions, String date, int currScore, int numQuestionsAnswered) {
