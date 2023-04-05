@@ -11,6 +11,14 @@ public class Country {
         this.country = null;
         this.continent = null;
     }
+
+    public Country(int id, String country, String continent){
+        this.id = id;
+        this.country = country;
+        this.continent = continent;
+    }
+
+
     public void setCountry(String country) {
         this.country = country;
     }
