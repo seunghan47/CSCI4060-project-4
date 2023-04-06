@@ -23,35 +23,6 @@ public class CountriesData {
 
     public CountriesData(Context context) {
         this.countriesDbHelper = CountriesDataTableHelper.getInstance(context);
-        countries = new ArrayList<Country>();
-        try {
-
-
-            InputStream in_s = getClass().getClassLoader().getResourceAsStream("country_continent.csv");
-
-//             CSVParser parser = new CSVParserBuilder().withSeparator(',').build();
-//             CSVReader readerBuilder = new CSVReaderBuilder(new InputStreamReader(in_s)).withCSVParser(parser).build();
-            CSVReader reader = new CSVReader(new InputStreamReader(in_s));
-
-            String[] nextRow;
-            while ((nextRow = reader.readNext()) != null) {
-
-                int id = 0;
-                for (int i = 0; i < nextRow.length; i++) {
-
-
-                    String name = nextRow[0];
-                    String continent = nextRow[1];
-                    Country country = new Country(id, name, continent);
-                    countries.add(country);
-                    id++;
-
-                }
-            }
-        }
-        catch(Exception e){
-            Log.e(TAG, e.toString());
-        }
     }
 
     public void open() {
@@ -65,12 +36,36 @@ public class CountriesData {
 
     /**
      * need to revise this part.
-     * @param countries
-     * @return
+
      */
     public Country storeCountry(Country countries) {
         ContentValues values = new ContentValues();
+        //countries = new ArrayList<Country>();
+        try {
+            InputStream in_s = getClass().getClassLoader().getResourceAsStream("country_continent.csv");
+            CSVReader reader = new CSVReader(new InputStreamReader(in_s));
 
+            String[] nextRow;
+            while ((nextRow = reader.readNext()) != null) {
+
+                int id = 0;
+                for (int i = 0; i < nextRow.length; i++) {
+
+
+                    String name = nextRow[0];
+                    String continent = nextRow[1];
+                    Country country = new Country(id, name, continent);
+                    //countries.add(country);
+                    id++;
+
+                }
+            }
+        }
+        catch(Exception e){
+            Log.e(TAG, e.toString());
+        }
+
+        /*
         values.put(CountriesDataTableHelper.COUNTRIES_COLUMN_NAME, countries.getCountry());
         values.put(CountriesDataTableHelper.COUNTRIES_COLUMN_CONTINENT, countries.getContinent());
 
@@ -78,6 +73,8 @@ public class CountriesData {
 
         countries.setId(id);
 
+
+         */
         return countries;
     }
 }
