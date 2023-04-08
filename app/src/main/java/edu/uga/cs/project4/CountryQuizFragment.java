@@ -16,6 +16,8 @@ import android.widget.TextView;
  * A simple {@link Fragment} subclass.
  * Use the {@link CountryQuizFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
+ * This fragment populates the country quiz
  */
 public class CountryQuizFragment extends Fragment {
 
@@ -31,7 +33,7 @@ public class CountryQuizFragment extends Fragment {
 
     //  }
 
-    // TODO: Rename and change types of parameters
+    // TODO:
     private String mParam1;
     private String mParam2;
     RadioGroup radioGroup;
@@ -67,6 +69,7 @@ public class CountryQuizFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
     }
 

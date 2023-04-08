@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * POJO for quiz
+ */
 public class Quiz {
     private Question [] questions;
     private String date;
@@ -20,21 +23,22 @@ public class Quiz {
         this.numQuestionsAnswered = -1;
     }
 
+    //Constructor which randomizes questions
     public Quiz(CountriesData countriesData){
         int count = 0;
         String[] countries = new String[6];
         while(count < 6){
-            int countryVal = ThreadLocalRandom.current().nextInt(countriesData.countries.size());
+            int countryVal = ThreadLocalRandom.current().nextInt(countriesData.countriesList.size());
             boolean a = false;
             for (int i = 0; i < countries.length; i++){
-                if (countries[i] != null && countries[i].equals(countriesData.countries.get(countryVal))){
+                if (countries[i] != null && countries[i].equals(countriesData.countriesList.get(countryVal))){
                     a = true;
                 }
             }
 
             if (a == false){
-                countries[count++] = countriesData.countries.get(countryVal).toString();
-                Question question = new Question(countriesData.countries.get(countryVal));
+                countries[count++] = countriesData.countriesList.get(countryVal).toString();
+                Question question = new Question(countriesData.countriesList.get(countryVal));
                 questionList.add(question);
             }
         }

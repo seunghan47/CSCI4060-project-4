@@ -5,6 +5,9 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 
+/**
+ * Creates layout of the country quiz
+ */
 public class CountryQuiz extends AppCompatActivity {
 
     @Override

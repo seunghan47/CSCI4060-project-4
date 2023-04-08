@@ -5,6 +5,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+/**
+ * Adapter to manipulate fragments.
+ */
 public class CountryQuizPagerAdapter extends FragmentStateAdapter {
     public CountryQuizPagerAdapter(
             FragmentManager fragmentManager,

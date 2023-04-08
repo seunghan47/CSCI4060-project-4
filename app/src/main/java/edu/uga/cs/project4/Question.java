@@ -1,6 +1,9 @@
 package edu.uga.cs.project4;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * POJO for question
+ */
 public class Question {
 
     public String[] Continents = {
@@ -11,6 +14,7 @@ public class Question {
     public String answer = "";
     public Country country = null;
 
+    //Facilitates random continents in the questions
     public Question(Country country){
         this.country = country;
 

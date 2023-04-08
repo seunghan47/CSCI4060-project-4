@@ -15,6 +15,9 @@ import android.widget.TextView;
 
 import java.io.File;
 
+/**
+ * Main activity
+ */
 public class MainActivity extends AppCompatActivity{
     final String TAG = "CSVReading";
     private Button quizButton;
@@ -43,6 +46,7 @@ public class MainActivity extends AppCompatActivity{
         }
 
 
+        //Creates new activity
         quizButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

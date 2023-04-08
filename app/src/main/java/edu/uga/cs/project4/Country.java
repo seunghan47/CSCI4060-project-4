@@ -1,5 +1,8 @@
 package edu.uga.cs.project4;
 
+/**
+ * POJO for Country
+ */
 public class Country {
 
     private long id;
@@ -12,7 +15,7 @@ public class Country {
         this.continent = null;
     }
 
-    public Country(int id, String country, String continent){
+    public Country(String country, String continent){
         this.id = id;
         this.country = country;
         this.continent = continent;
