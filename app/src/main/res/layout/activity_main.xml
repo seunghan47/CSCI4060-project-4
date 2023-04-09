@@ -35,7 +35,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome, to start the quiz press the floating action button. This quiz consists of 6 questions which will ask you which continent each country belongs to."
+        android:text="Welcome, to start the quiz press the start quiz button. This quiz consists of 6 questions which will ask you which continent each country belongs to."
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
