@@ -5,16 +5,19 @@ package edu.uga.cs.project4;
  */
 public class Country {
 
+    //Variables for country.
     private long id;
     private String country;
     private String continent;
 
+    //Empty Constructor
     public Country() {
         this.id = -1;
         this.country = null;
         this.continent = null;
     }
 
+    //Constructor
     public Country(String country, String continent){
         this.id = id;
         this.country = country;
@@ -22,6 +25,7 @@ public class Country {
     }
 
 
+    //Setters
     public void setCountry(String country) {
         this.country = country;
     }
@@ -33,6 +37,7 @@ public class Country {
         this.id = id;
     }
 
+    //Getters
     public String getCountry() {
         return country;
     }

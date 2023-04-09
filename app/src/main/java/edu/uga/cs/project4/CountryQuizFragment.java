@@ -36,6 +36,9 @@ public class CountryQuizFragment extends Fragment {
     // TODO:
     private String mParam1;
     private String mParam2;
+    private int num;
+
+    //Views in the country quiz
     RadioGroup radioGroup;
     RadioButton radioButton;
     RadioButton radioButton1;
@@ -69,6 +72,7 @@ public class CountryQuizFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+            num = getArguments().getInt("question Num");
 
         }
     }

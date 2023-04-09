@@ -7,8 +7,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+/**
+ * Helper to facilitate SQL storage and retrieval
+ */
 public class CountriesDataTableHelper extends SQLiteOpenHelper {
 
+    //SQL strings
     private static final String DB_NAME = "countries.db";
     private static final int    DB_VERSION = 1;
     private static CountriesDataTableHelper helperInstance;
@@ -26,6 +30,7 @@ public class CountriesDataTableHelper extends SQLiteOpenHelper {
         super(context, DB_NAME, null, DB_VERSION);
     }
 
+    //Singleton class
     public static synchronized CountriesDataTableHelper getInstance( Context context ) {
         if (helperInstance == null) {
             helperInstance = new CountriesDataTableHelper(context.getApplicationContext());
